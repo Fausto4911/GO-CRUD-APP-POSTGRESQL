@@ -3,8 +3,8 @@ package driver
 import (
 	"database/sql"
 	"fmt"
+	_ "github.com/lib/pq"
 	"log"
-	_"github.com/lib/pq"
 )
 
 const (

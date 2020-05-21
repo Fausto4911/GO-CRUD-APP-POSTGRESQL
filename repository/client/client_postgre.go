@@ -97,7 +97,7 @@ func (rep IClientRepository) GetById(id int, db *sql.DB) (model.Client, error) {
 		&nick_name,
 		&create_at,
 		&update_at,
-		)
+	)
 	if err != nil {
 		return m, err
 	}
@@ -149,7 +149,7 @@ func (rep IClientRepository) Update(client model.Client, db *sql.DB) error {
 		GetNUllString(client.NickName),
 		GetNUllTime(client.UpdateAt),
 		client.Id,
-		)
+	)
 	if err != nil {
 		return err
 	}
@@ -160,7 +160,6 @@ func (rep IClientRepository) Update(client model.Client, db *sql.DB) error {
 	}
 	return nil
 }
-
 
 func GetNUllTime(t time.Time) (n pq.NullTime) {
 	if t.IsZero() {
